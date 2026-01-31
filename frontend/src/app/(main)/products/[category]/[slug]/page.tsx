@@ -41,7 +41,7 @@ export default async function ProductDetailPage(props: { params: Promise<{ categ
     const categoryName = params.category.replace(/-/g, " ");
 
     return (
-        <div className="min-h-screen bg-black text-white selection:bg-neon-cyan selection:text-black">
+        <div className="min-h-screen bg-white text-gray-900 selection:bg-neon-cyan selection:text-black">
             {/* Ambient Background Glow */}
             <div className="fixed top-0 left-0 w-full h-full overflow-hidden pointer-events-none z-0">
                 <div className="absolute top-[-10%] right-[-10%] w-[500px] h-[500px] bg-neon-cyan/5 rounded-full blur-[120px]" />
@@ -54,9 +54,9 @@ export default async function ProductDetailPage(props: { params: Promise<{ categ
                     <div className="flex items-center gap-2 text-sm text-gray-500 mb-6 font-medium">
                         <Link href="/products" className="hover:text-neon-cyan transition-colors">Products</Link>
                         <span className="text-gray-700">/</span>
-                        <Link href={`/products/${params.category}`} className="hover:text-neon-cyan transition-colors capitalize">{categoryName}</Link>
-                        <span className="text-gray-700">/</span>
-                        <span className="text-gray-300 capitalize">{productName}</span>
+                        <Link href={`/products/${params.category}`} className="hover:text-neon-cyan transition-colors capitalize text-gray-600">{categoryName}</Link>
+                        <span className="text-gray-400">/</span>
+                        <span className="text-gray-400 capitalize">{productName}</span>
                     </div>
                 </div>
 
@@ -66,24 +66,24 @@ export default async function ProductDetailPage(props: { params: Promise<{ categ
                         <ProductGallery images={mockProductImages} />
 
                         {/* Quick Trust Signals */}
-                        <div className="grid grid-cols-3 gap-4 mt-8 pt-8 border-t border-white/5">
+                        <div className="grid grid-cols-3 gap-4 mt-8 pt-8 border-t border-gray-100">
                             <div className="text-center">
-                                <div className="w-10 h-10 mx-auto bg-white/5 rounded-full flex items-center justify-center mb-2 text-neon-cyan">
+                                <div className="w-10 h-10 mx-auto bg-gray-50 rounded-full flex items-center justify-center mb-2 text-neon-cyan border border-gray-100">
                                     <ShieldCheck size={20} />
                                 </div>
-                                <span className="text-xs text-gray-400 block">2-Year Warranty</span>
+                                <span className="text-xs text-gray-500 block">2-Year Warranty</span>
                             </div>
                             <div className="text-center">
-                                <div className="w-10 h-10 mx-auto bg-white/5 rounded-full flex items-center justify-center mb-2 text-neon-purple">
+                                <div className="w-10 h-10 mx-auto bg-gray-50 rounded-full flex items-center justify-center mb-2 text-neon-purple border border-gray-100">
                                     <Truck size={20} />
                                 </div>
-                                <span className="text-xs text-gray-400 block">Fast Delivery</span>
+                                <span className="text-xs text-gray-500 block">Fast Delivery</span>
                             </div>
                             <div className="text-center">
-                                <div className="w-10 h-10 mx-auto bg-white/5 rounded-full flex items-center justify-center mb-2 text-blue-400">
+                                <div className="w-10 h-10 mx-auto bg-gray-50 rounded-full flex items-center justify-center mb-2 text-blue-500 border border-gray-100">
                                     <Cog size={20} />
                                 </div>
-                                <span className="text-xs text-gray-400 block">Customizable</span>
+                                <span className="text-xs text-gray-500 block">Customizable</span>
                             </div>
                         </div>
                     </div>
@@ -94,17 +94,17 @@ export default async function ProductDetailPage(props: { params: Promise<{ categ
                             <div className="inline-block px-3 py-1 rounded-full bg-neon-cyan/10 border border-neon-cyan/20 text-neon-cyan text-xs font-bold tracking-wider mb-4">
                                 INDUSTRIAL GRADE
                             </div>
-                            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold font-orbitron capitalize leading-tight mb-6">
+                            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold font-orbitron capitalize leading-tight mb-6 text-gray-900">
                                 {productName}
                             </h1>
-                            <p className="text-lg text-gray-400 leading-relaxed">
+                            <p className="text-lg text-gray-600 leading-relaxed">
                                 Engineered for high-performance industrial environments. The {productName} delivers exceptional reliability, advanced control capabilities, and seamless integration with existing automation infrastructure.
                             </p>
                         </div>
 
                         {/* Feature Highlights */}
-                        <div className="bg-white/5 border border-white/10 rounded-2xl p-8 backdrop-blur-sm">
-                            <h3 className="text-lg font-bold text-white mb-6 font-orbitron">Key Specifications</h3>
+                        <div className="bg-white border border-gray-100 rounded-2xl p-8 shadow-sm">
+                            <h3 className="text-lg font-bold text-gray-900 mb-6 font-orbitron">Key Specifications</h3>
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-y-4 gap-x-8">
                                 {[
                                     "High efficiency power management",
@@ -118,7 +118,7 @@ export default async function ProductDetailPage(props: { params: Promise<{ categ
                                         <div className="mt-1 w-5 h-5 rounded-full bg-neon-cyan/10 text-neon-cyan flex items-center justify-center flex-shrink-0">
                                             <Check size={12} strokeWidth={3} />
                                         </div>
-                                        <span className="text-gray-300 text-sm">{feature}</span>
+                                        <span className="text-gray-600 text-sm">{feature}</span>
                                     </div>
                                 ))}
                             </div>
@@ -130,18 +130,18 @@ export default async function ProductDetailPage(props: { params: Promise<{ categ
                                 Request Quote
                                 <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
                             </button>
-                            <button className="flex-1 px-8 py-4 bg-white/5 border border-white/10 text-white font-bold rounded-xl hover:bg-white/10 transition-all duration-300">
+                            <button className="flex-1 px-8 py-4 bg-white border border-gray-200 text-gray-900 font-bold rounded-xl hover:bg-gray-50 transition-all duration-300 shadow-sm">
                                 Download Datasheet
                             </button>
                         </div>
 
                         {/* Description Tabs Section */}
-                        <div className="pt-12 border-t border-white/10">
+                        <div className="pt-12 border-t border-gray-100">
                             <div className="space-y-6">
-                                <h3 className="text-2xl font-bold text-white font-orbitron">Technical Description</h3>
-                                <div className="prose prose-invert prose-cyan max-w-none text-gray-400">
+                                <h3 className="text-2xl font-bold text-gray-900 font-orbitron">Technical Description</h3>
+                                <div className="prose prose-invert prose-cyan max-w-none text-gray-600">
                                     <p>
-                                        The <span className="text-white font-medium capitalize">{productName}</span> sets a new standard for industrial reliability. Designed by expert engineers and manufactured using premium-grade materials, it withstands harsh operating conditions while maintaining peak performance.
+                                        The <span className="text-gray-900 font-medium capitalize">{productName}</span> sets a new standard for industrial reliability. Designed by expert engineers and manufactured using premium-grade materials, it withstands harsh operating conditions while maintaining peak performance.
                                     </p>
                                     <p>
                                         Whether used in manufacturing plants, power distribution centers, or automated assembly lines, this product ensures operational continuity. Its advanced safety features protect both personnel and downstream equipment from electrical faults.
@@ -160,7 +160,7 @@ export default async function ProductDetailPage(props: { params: Promise<{ categ
             </div>
 
             {/* FAQ Section */}
-            <div className="border-t border-white/5 bg-black/50">
+            <div className="border-t border-gray-100 bg-gray-50">
                 <FAQSection
                     title="Product Questions"
                     subtitle="Common questions about this product series"

@@ -46,7 +46,7 @@ export default function FAQSection({
     const colors = colorClasses[accentColor];
 
     return (
-        <section className="py-24 bg-black relative overflow-hidden">
+        <section className="py-24 bg-white relative overflow-hidden">
             {/* Background Effects */}
             <div className={`absolute top-0 left-0 w-96 h-96 bg-${accentColor === "cyan" ? "neon-cyan" : "neon-purple"}/5 rounded-full blur-[120px]`} />
             <div className={`absolute bottom-0 right-0 w-96 h-96 bg-${accentColor === "cyan" ? "neon-purple" : "neon-cyan"}/5 rounded-full blur-[120px]`} />
@@ -66,13 +66,13 @@ export default function FAQSection({
                             FAQ
                         </span>
                     </div>
-                    <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                    <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
                         {title.split(" ").slice(0, -1).join(" ")}{" "}
                         <span className={`text-transparent bg-clip-text bg-gradient-to-r ${colors.gradient}`}>
                             {title.split(" ").slice(-1)}
                         </span>
                     </h2>
-                    <p className="text-gray-400 max-w-2xl mx-auto text-base leading-relaxed">
+                    <p className="text-gray-600 max-w-2xl mx-auto text-base leading-relaxed">
                         {subtitle}
                     </p>
                 </motion.div>
@@ -89,7 +89,7 @@ export default function FAQSection({
                             className="group"
                         >
                             <div
-                                className={`bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl overflow-hidden transition-all duration-300 ${openIndex === index ? `border-${accentColor === "cyan" ? "neon-cyan" : "neon-purple"}/50 shadow-lg shadow-${accentColor === "cyan" ? "neon-cyan" : "neon-purple"}/10` : "hover:border-white/20"
+                                className={`bg-white border border-gray-200 rounded-2xl overflow-hidden transition-all duration-300 ${openIndex === index ? `border-${accentColor === "cyan" ? "neon-cyan" : "neon-purple"}/50 shadow-lg shadow-${accentColor === "cyan" ? "neon-cyan" : "neon-purple"}/10` : "hover:border-gray-300"
                                     }`}
                             >
                                 {/* Question */}
@@ -98,12 +98,12 @@ export default function FAQSection({
                                     className="w-full px-6 py-4 flex items-center justify-between text-left transition-all duration-300"
                                 >
                                     <div className="flex items-start gap-4 flex-1">
-                                        <div className={`flex-shrink-0 w-7 h-7 rounded-full border-2 ${openIndex === index ? colors.border : "border-white/20"} flex items-center justify-center transition-all duration-300`}>
-                                            <span className={`text-xs font-bold ${openIndex === index ? colors.text : "text-white/60"}`}>
+                                        <div className={`flex-shrink-0 w-7 h-7 rounded-full border-2 ${openIndex === index ? colors.border : "border-gray-200"} flex items-center justify-center transition-all duration-300`}>
+                                            <span className={`text-xs font-bold ${openIndex === index ? colors.text : "text-gray-400"}`}>
                                                 {index + 1}
                                             </span>
                                         </div>
-                                        <h3 className={`text-base md:text-lg font-bold transition-colors duration-300 ${openIndex === index ? colors.text : "text-white group-hover:text-white/80"
+                                        <h3 className={`text-base md:text-lg font-bold transition-colors duration-300 ${openIndex === index ? colors.text : "text-gray-900 group-hover:text-gray-700"
                                             }`}>
                                             {faq.question}
                                         </h3>
@@ -113,7 +113,7 @@ export default function FAQSection({
                                         transition={{ duration: 0.3 }}
                                         className="flex-shrink-0 ml-4"
                                     >
-                                        <ChevronDown className={`w-5 h-5 transition-colors duration-300 ${openIndex === index ? colors.text : "text-white/60"
+                                        <ChevronDown className={`w-5 h-5 transition-colors duration-300 ${openIndex === index ? colors.text : "text-gray-400"
                                             }`} />
                                     </motion.div>
                                 </button>
@@ -130,7 +130,7 @@ export default function FAQSection({
                                         >
                                             <div className="px-6 pb-4 pl-16">
                                                 <div className={`border-l-2 ${colors.border} pl-4 py-1`}>
-                                                    <p className="text-gray-400 leading-relaxed text-sm">
+                                                    <p className="text-gray-600 leading-relaxed text-sm">
                                                         {faq.answer}
                                                     </p>
                                                 </div>
@@ -151,8 +151,8 @@ export default function FAQSection({
                     viewport={{ once: true }}
                     className="text-center mt-16"
                 >
-                    <div className="inline-block bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl px-8 py-6">
-                        <p className="text-white mb-4">
+                    <div className="inline-block bg-white border border-gray-200 rounded-2xl px-8 py-6 shadow-md">
+                        <p className="text-gray-900 mb-4">
                             Still have questions? We're here to help!
                         </p>
                         <a

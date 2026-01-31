@@ -90,7 +90,7 @@ const allProducts: CarouselItem[] = [
 
 export default function Products() {
     return (
-        <section id="products" className="py-24 bg-black relative overflow-hidden">
+        <section id="products" className="py-24 bg-white relative overflow-hidden">
             {/* Background Gradients */}
             <div className="absolute top-0 right-0 w-1/3 h-1/3 bg-neon-cyan/5 rounded-full blur-[100px]" />
             <div className="absolute bottom-0 left-0 w-1/3 h-1/3 bg-neon-purple/5 rounded-full blur-[100px]" />
@@ -106,10 +106,10 @@ export default function Products() {
                         <span className="text-neon-cyan uppercase tracking-widest text-sm font-medium mb-4 block">
                             Our Innovation
                         </span>
-                        <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+                        <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
                             Cutting-Edge <span className="text-transparent bg-clip-text bg-gradient-to-r from-neon-cyan to-neon-purple">Products</span>
                         </h2>
-                        <p className="text-gray-400 max-w-2xl mx-auto text-lg leading-relaxed">
+                        <p className="text-gray-600 max-w-2xl mx-auto text-lg leading-relaxed">
                             Discover our range of sustainable technology solutions designed to empower your business for a greener future.
                         </p>
                     </motion.div>

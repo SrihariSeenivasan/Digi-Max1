@@ -104,14 +104,14 @@ export default function Navbar() {
 
     return (
         <nav
-            className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${scrolled ? "bg-black/80 backdrop-blur-md py-4 shadow-lg border-b border-white/10" : "bg-transparent py-6"
+            className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${scrolled ? "bg-white/80 backdrop-blur-md py-4 shadow-lg border-b border-black/10" : "bg-transparent py-6"
                 }`}
             onMouseLeave={() => setActiveDropdown(null)}
         >
             <div className="container mx-auto px-6 flex justify-between items-center relative">
                 <Link href="/" className="text-2xl font-bold tracking-tighter flex items-center gap-2" onClick={closeAll}>
                     <span className="text-neon-cyan">DIGI</span>
-                    <span className="text-white">MAX</span>
+                    <span className="text-black">MAX</span>
                 </Link>
 
                 {/* --- Desktop Menu --- */}
@@ -136,12 +136,12 @@ export default function Navbar() {
                                     animate={{ opacity: 1, y: 0 }}
                                     exit={{ opacity: 0, y: 10 }}
                                     transition={{ duration: 0.2 }}
-                                    className="absolute top-full left-0 mt-2 w-64 bg-black/90 backdrop-blur-xl border border-white/10 rounded-xl shadow-2xl p-2 z-50"
+                                    className="absolute top-full left-0 mt-2 w-64 bg-white/90 backdrop-blur-xl border border-black/10 rounded-xl shadow-2xl p-2 z-50"
                                 >
                                     {productCategories.map((cat) => (
                                         <div key={cat.name} className="relative">
-                                            <div className="flex items-center justify-between p-2 rounded-lg hover:bg-white/10 transition-colors group/item">
-                                                <Link href={cat.href} className="flex-1 text-sm text-gray-300 hover:text-white font-medium" onClick={closeAll}>
+                                            <div className="flex items-center justify-between p-2 rounded-lg hover:bg-black/5 transition-colors group/item">
+                                                <Link href={cat.href} className="flex-1 text-sm text-gray-700 hover:text-black font-medium" onClick={closeAll}>
                                                     {cat.name}
                                                 </Link>
                                                 {/* Category Expander Icon */}
@@ -163,7 +163,7 @@ export default function Navbar() {
                                                         initial={{ height: 0, opacity: 0 }}
                                                         animate={{ height: "auto", opacity: 1 }}
                                                         exit={{ height: 0, opacity: 0 }}
-                                                        className="overflow-hidden bg-white/5 rounded-lg mb-2"
+                                                        className="overflow-hidden bg-black/5 rounded-lg mb-2"
                                                     >
                                                         <div className="pl-4 pr-2 py-2 space-y-1">
                                                             {cat.items.map((item) => (
@@ -203,12 +203,12 @@ export default function Navbar() {
                                     initial={{ opacity: 0, y: 10 }}
                                     animate={{ opacity: 1, y: 0 }}
                                     exit={{ opacity: 0, y: 10 }}
-                                    className="absolute top-full left-0 mt-2 w-64 bg-black/90 backdrop-blur-xl border border-white/10 rounded-xl shadow-2xl p-2 z-50"
+                                    className="absolute top-full left-0 mt-2 w-64 bg-white/90 backdrop-blur-xl border border-black/10 rounded-xl shadow-2xl p-2 z-50"
                                 >
                                     {serviceCategories.map((cat) => (
                                         <div key={cat.name} className="relative">
-                                            <div className="flex items-center justify-between p-2 rounded-lg hover:bg-white/10 transition-colors">
-                                                <Link href={cat.href} className="flex-1 text-sm text-gray-300 hover:text-white font-medium" onClick={closeAll}>
+                                            <div className="flex items-center justify-between p-2 rounded-lg hover:bg-black/5 transition-colors">
+                                                <Link href={cat.href} className="flex-1 text-sm text-gray-700 hover:text-black font-medium" onClick={closeAll}>
                                                     {cat.name}
                                                 </Link>
                                                 <button
@@ -227,7 +227,7 @@ export default function Navbar() {
                                                         initial={{ height: 0, opacity: 0 }}
                                                         animate={{ height: "auto", opacity: 1 }}
                                                         exit={{ height: 0, opacity: 0 }}
-                                                        className="overflow-hidden bg-white/5 rounded-lg mb-2"
+                                                        className="overflow-hidden bg-black/5 rounded-lg mb-2"
                                                     >
                                                         <div className="pl-4 pr-2 py-2 space-y-1">
                                                             {cat.items.map((item) => (
@@ -261,7 +261,7 @@ export default function Navbar() {
 
                 {/* --- Mobile Toggle --- */}
                 <button
-                    className="md:hidden text-white hover:text-neon-cyan transition-colors"
+                    className="md:hidden text-gray-900 hover:text-neon-cyan transition-colors"
                     onClick={() => setIsOpen(!isOpen)}
                 >
                     {isOpen ? <X size={28} /> : <Menu size={28} />}
@@ -275,7 +275,7 @@ export default function Navbar() {
                         initial={{ opacity: 0, height: 0 }}
                         animate={{ opacity: 1, height: "auto" }}
                         exit={{ opacity: 0, height: 0 }}
-                        className="md:hidden bg-black/95 backdrop-blur-xl border-b border-white/10 overflow-hidden"
+                        className="md:hidden bg-white/95 backdrop-blur-xl border-b border-black/10 overflow-hidden"
                     >
                         <div className="flex flex-col p-6 space-y-4">
                             <Link href={getNavLink("hero")} className="mobile-nav-item" onClick={closeAll}>Home</Link>
@@ -357,10 +357,10 @@ export default function Navbar() {
 
             <style jsx>{`
                 .nav-item {
-                    @apply text-gray-300 hover:text-neon-cyan transition-colors text-sm uppercase tracking-widest font-medium cursor-pointer;
+                    @apply text-gray-700 hover:text-neon-cyan transition-colors text-sm uppercase tracking-widest font-medium cursor-pointer;
                 }
                 .mobile-nav-item {
-                    @apply text-lg text-gray-200 hover:text-neon-cyan transition-colors font-medium;
+                    @apply text-lg text-gray-900 hover:text-neon-cyan transition-colors font-medium;
                 }
             `}</style>
         </nav>

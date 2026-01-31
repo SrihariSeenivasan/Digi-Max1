@@ -6,14 +6,14 @@ import { ArrowRight, Zap, Shield, Globe } from "lucide-react";
 
 export default function Hero() {
     return (
-        <section className="relative w-full min-h-screen flex items-center justify-center overflow-hidden bg-deep-blue selection:bg-neon-cyan selection:text-deep-blue">
+        <section className="relative w-full min-h-screen flex items-center justify-center overflow-hidden bg-white selection:bg-neon-cyan selection:text-deep-blue">
             {/* 1. Dynamic Background Layer */}
             <div className="absolute inset-0 z-0">
                 {/* Dark Base */}
-                <div className="absolute inset-0 bg-deep-blue" />
+                <div className="absolute inset-0 bg-white" />
 
                 {/* Cyber Grid */}
-                <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff05_1px,transparent_1px),linear-gradient(to_bottom,#ffffff05_1px,transparent_1px)] bg-[size:40px_40px] [mask-image:radial-gradient(ellipse_80%_60%_at_50%_0%,#000_70%,transparent_100%)]" />
+                <div className="absolute inset-0 bg-[linear-gradient(to_right,#00000005_1px,transparent_1px),linear-gradient(to_bottom,#00000005_1px,transparent_1px)] bg-[size:40px_40px] [mask-image:radial-gradient(ellipse_80%_60%_at_50%_0%,#000_70%,transparent_100%)]" />
 
                 {/* Glowing Orbs */}
                 <div className="absolute top-[-20%] right-[-10%] w-[800px] h-[800px] rounded-full bg-neon-purple/10 blur-[150px] animate-pulse" />
@@ -48,9 +48,9 @@ export default function Hero() {
                     </div>
 
                     {/* Headline */}
-                    <h1 className="text-5xl md:text-7xl lg:text-8xl font-black text-white leading-[1.1] tracking-tight font-orbitron">
+                    <h1 className="text-5xl md:text-7xl lg:text-8xl font-black text-gray-900 leading-[1.1] tracking-tight font-orbitron">
                         POWERING <br />
-                        <span className="relative inline-block text-transparent bg-clip-text bg-gradient-to-r from-neon-cyan via-white to-neon-purple filter drop-shadow-[0_0_10px_rgba(189,0,255,0.3)]">
+                        <span className="relative inline-block text-transparent bg-clip-text bg-gradient-to-r from-neon-cyan via-blue-500 to-neon-purple filter drop-shadow-[0_0_10px_rgba(189,0,255,0.3)]">
                             TOMORROW
                             <svg className="absolute w-full h-3 -bottom-1 left-0 text-neon-cyan/30" viewBox="0 0 100 10" preserveAspectRatio="none">
                                 <path d="M0 5 Q 50 10 100 5" stroke="currentColor" strokeWidth="2" fill="none" />
@@ -59,10 +59,10 @@ export default function Hero() {
                     </h1>
 
                     {/* Description */}
-                    <p className="text-gray-400 text-lg md:text-xl max-w-2xl leading-relaxed mx-auto lg:mx-0 font-light border-l-2 border-neon-cyan/20 pl-6">
+                    <p className="text-gray-600 text-lg md:text-xl max-w-2xl leading-relaxed mx-auto lg:mx-0 font-light border-l-2 border-neon-cyan/20 pl-6">
                         Unlock the potential of Industry 4.0 with DigiMax. We engineer
-                        <span className="text-white font-medium"> precision switchgear</span> and
-                        <span className="text-white font-medium"> intelligent automation systems </span>
+                        <span className="text-black font-medium"> precision switchgear</span> and
+                        <span className="text-black font-medium"> intelligent automation systems </span>
                         for a sustainable, efficient future.
                     </p>
 
@@ -76,10 +76,10 @@ export default function Hero() {
                             <motion.div
                                 key={idx}
                                 whileHover={{ scale: 1.05 }}
-                                className="flex items-center gap-3 px-4 py-2 rounded-lg bg-white/5 border border-white/5 hover:border-neon-cyan/30 hover:bg-white/10 transition-all cursor-default backdrop-blur-sm"
+                                className="flex items-center gap-3 px-4 py-2 rounded-lg bg-black/5 border border-black/5 hover:border-neon-cyan/30 hover:bg-black/10 transition-all cursor-default backdrop-blur-sm"
                             >
                                 <item.icon size={16} className={item.color} />
-                                <span className="text-gray-200 text-sm font-medium">{item.text}</span>
+                                <span className="text-gray-700 text-sm font-medium">{item.text}</span>
                             </motion.div>
                         ))}
                     </div>
@@ -94,7 +94,7 @@ export default function Hero() {
                             <div className="absolute inset-0 bg-white/80 translate-y-full group-hover:translate-y-0 transition-transform duration-300" />
                         </button>
 
-                        <button className="relative px-8 py-4 bg-transparent border border-white/10 hover:border-neon-purple text-white font-bold text-lg rounded-xl overflow-hidden transition-all group hover:shadow-[0_0_20px_rgba(189,0,255,0.2)]">
+                        <button className="relative px-8 py-4 bg-transparent border border-black/10 hover:border-neon-purple text-gray-900 font-bold text-lg rounded-xl overflow-hidden transition-all group hover:shadow-[0_0_20px_rgba(189,0,255,0.2)]">
                             <span className="relative z-10 group-hover:text-neon-purple transition-colors">Request a Demo</span>
                             <div className="absolute inset-0 bg-neon-purple/10 opacity-0 group-hover:opacity-100 transition-opacity" />
                         </button>
@@ -117,7 +117,7 @@ export default function Hero() {
             </div>
 
             {/* Bottom Gradient Fade */}
-            <div className="absolute bottom-0 w-full h-32 bg-gradient-to-t from-black to-transparent pointer-events-none" />
+            <div className="absolute bottom-0 w-full h-32 bg-gradient-to-t from-white to-transparent pointer-events-none" />
         </section>
     );
 }

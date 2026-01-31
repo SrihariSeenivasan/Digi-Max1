@@ -86,16 +86,16 @@ export default function Services() {
     };
 
     return (
-        <section id="services" className="py-24 bg-black relative">
+        <section id="services" className="py-24 bg-white relative">
             {/* Background Grid */}
-            <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-20" />
+            <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-5" />
 
             <div className="container mx-auto px-6 relative z-10">
                 <div className="text-center mb-16">
                     <h2 className="text-4xl md:text-5xl font-bold font-orbitron mb-4">
                         OUR <span className="text-neon-purple">SERVICES</span>
                     </h2>
-                    <p className="text-gray-400 max-w-2xl mx-auto">
+                    <p className="text-gray-600 max-w-2xl mx-auto">
                         Comprehensive digital solutions designed to propel your business into the future.
                     </p>
                 </div>
@@ -109,15 +109,15 @@ export default function Services() {
                                 whileInView={{ opacity: 1, y: 0 }}
                                 transition={{ duration: 0.5, delay: index * 0.1 }}
                                 viewport={{ once: true }}
-                                className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 hover:border-neon-cyan/50 transition-all duration-300 cursor-pointer h-full"
+                                className="group relative bg-white border border-gray-100 rounded-2xl p-8 hover:border-neon-cyan/50 shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer h-full"
                             >
-                                <div className={`text-gray-400 mb-6 ${service.color} transition-colors duration-300`}>
+                                <div className={`text-gray-500 mb-6 ${service.color} transition-colors duration-300`}>
                                     {service.icon}
                                 </div>
-                                <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-neon-cyan transition-colors">
+                                <h3 className="text-2xl font-bold text-gray-900 mb-4 group-hover:text-neon-cyan transition-colors">
                                     {service.title}
                                 </h3>
-                                <p className="text-gray-400 leading-relaxed">
+                                <p className="text-gray-600 leading-relaxed">
                                     {service.desc}
                                 </p>
                             </motion.div>
@@ -146,14 +146,14 @@ export default function Services() {
                                     draggable={false}
                                     onClick={handleLinkClick}
                                 >
-                                    <div className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 transition-all duration-300 h-full">
-                                        <div className={`text-gray-400 mb-6 ${service.color} transition-colors duration-300`}>
+                                    <div className="group relative bg-white border border-gray-100 rounded-2xl p-8 shadow-lg transition-all duration-300 h-full">
+                                        <div className={`text-gray-500 mb-6 ${service.color} transition-colors duration-300`}>
                                             {service.icon}
                                         </div>
-                                        <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-neon-cyan transition-colors">
+                                        <h3 className="text-2xl font-bold text-gray-900 mb-4 group-hover:text-neon-cyan transition-colors">
                                             {service.title}
                                         </h3>
-                                        <p className="text-gray-400 leading-relaxed text-sm">
+                                        <p className="text-gray-600 leading-relaxed text-sm">
                                             {service.desc}
                                         </p>
                                         <div className="absolute inset-0 bg-gradient-to-br from-transparent to-neon-purple/5 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none rounded-2xl" />
@@ -166,7 +166,7 @@ export default function Services() {
 
                 {/* Mobile Drag Indicator */}
                 <div className="md:hidden flex justify-center mt-8 gap-2">
-                    <div className="w-16 h-1 bg-white/10 rounded-full overflow-hidden">
+                    <div className="w-16 h-1 bg-gray-200 rounded-full overflow-hidden">
                         <motion.div
                             className="h-full bg-neon-purple"
                             style={{

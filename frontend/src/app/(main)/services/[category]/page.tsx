@@ -43,7 +43,7 @@ export default async function ServiceCategoryPage(props: { params: Promise<{ cat
     ];
 
     return (
-        <div className="min-h-screen bg-black text-white selection:bg-neon-purple selection:text-white">
+        <div className="min-h-screen bg-white text-gray-900 selection:bg-neon-purple selection:text-white">
             {/* Ambient Background */}
             <div className="fixed top-0 left-0 w-full h-full overflow-hidden pointer-events-none z-0">
                 <div className="absolute top-[-20%] left-[-10%] w-[600px] h-[600px] bg-neon-purple/5 rounded-full blur-[150px]" />
@@ -54,8 +54,8 @@ export default async function ServiceCategoryPage(props: { params: Promise<{ cat
                 {/* Breadcrumbs */}
                 <div className="mb-8 flex items-center gap-2 text-sm text-gray-500 font-medium">
                     <Link href="/services" className="hover:text-neon-purple transition-colors">Services</Link>
-                    <span className="text-gray-700">/</span>
-                    <span className="text-gray-300 capitalize">{categoryName}</span>
+                    <span className="text-gray-400">/</span>
+                    <span className="text-gray-600 capitalize">{categoryName}</span>
                 </div>
 
                 {/* Hero Headers */}
@@ -63,10 +63,10 @@ export default async function ServiceCategoryPage(props: { params: Promise<{ cat
                     <div className="inline-block px-3 py-1 rounded-full bg-neon-purple/10 border border-neon-purple/20 text-neon-purple text-xs font-bold tracking-wider mb-4">
                         SERVICE SUITE
                     </div>
-                    <h1 className="text-5xl md:text-6xl font-bold font-orbitron capitalize mb-6 text-white leading-tight">
+                    <h1 className="text-5xl md:text-6xl font-bold font-orbitron capitalize mb-6 text-gray-900 leading-tight">
                         {serviceData.title}
                     </h1>
-                    <p className="text-xl text-gray-400 max-w-3xl leading-relaxed border-l-2 border-neon-purple pl-6">
+                    <p className="text-xl text-gray-600 max-w-3xl leading-relaxed border-l-2 border-neon-purple pl-6">
                         {serviceData.description}
                     </p>
                 </div>
@@ -76,30 +76,30 @@ export default async function ServiceCategoryPage(props: { params: Promise<{ cat
 
                     {/* Sidebar: Service Stats/Trust */}
                     <div className="lg:col-span-1 space-y-6">
-                        <div className="bg-white/5 border border-white/10 rounded-2xl p-6">
+                        <div className="bg-white border border-gray-100 rounded-2xl p-6 shadow-md">
                             <div className="flex items-center gap-3 mb-4 text-neon-purple">
                                 <Users size={24} />
-                                <h3 className="font-bold text-white">Expert Team</h3>
+                                <h3 className="font-bold text-gray-900">Expert Team</h3>
                             </div>
-                            <p className="text-sm text-gray-400">
+                            <p className="text-sm text-gray-600">
                                 Certified engineers with 10+ years of detailed field experience.
                             </p>
                         </div>
-                        <div className="bg-white/5 border border-white/10 rounded-2xl p-6">
-                            <div className="flex items-center gap-3 mb-4 text-blue-400">
+                        <div className="bg-white border border-gray-100 rounded-2xl p-6 shadow-md">
+                            <div className="flex items-center gap-3 mb-4 text-blue-500">
                                 <Clock size={24} />
-                                <h3 className="font-bold text-white">24/7 Support</h3>
+                                <h3 className="font-bold text-gray-900">24/7 Support</h3>
                             </div>
-                            <p className="text-sm text-gray-400">
+                            <p className="text-sm text-gray-600">
                                 Round-the-clock emergency assistance for critical systems.
                             </p>
                         </div>
-                        <div className="bg-white/5 border border-white/10 rounded-2xl p-6">
-                            <div className="flex items-center gap-3 mb-4 text-green-400">
+                        <div className="bg-white border border-gray-100 rounded-2xl p-6 shadow-md">
+                            <div className="flex items-center gap-3 mb-4 text-green-500">
                                 <BadgeCheck size={24} />
-                                <h3 className="font-bold text-white">Guaranteed</h3>
+                                <h3 className="font-bold text-gray-900">Guaranteed</h3>
                             </div>
-                            <p className="text-sm text-gray-400">
+                            <p className="text-sm text-gray-600">
                                 Performance guarantees on all our integration projects.
                             </p>
                         </div>
@@ -113,16 +113,16 @@ export default async function ServiceCategoryPage(props: { params: Promise<{ cat
                                 key={idx}
                                 className="group block"
                             >
-                                <div className="h-full bg-white/5 border border-white/10 rounded-2xl p-1 overflow-hidden hover:border-neon-purple/50 transition-all duration-300 flex flex-col">
+                                <div className="h-full bg-white border border-gray-200 rounded-2xl p-1 overflow-hidden hover:border-neon-purple/50 hover:shadow-lg transition-all duration-300 flex flex-col">
                                     {/* Image Wrapper */}
-                                    <div className="relative h-48 rounded-xl overflow-hidden mb-4 bg-black/50">
-                                        <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent z-10" />
+                                    <div className="relative h-48 rounded-xl overflow-hidden mb-4 bg-gray-100">
+                                        <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent z-10" />
                                         <img
                                             src={service.image}
                                             alt={service.name}
                                             className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                                         />
-                                        <div className="absolute top-3 right-3 z-20 bg-black/60 backdrop-blur-md p-2 rounded-lg text-white group-hover:bg-neon-purple group-hover:text-white transition-colors">
+                                        <div className="absolute top-3 right-3 z-20 bg-white/90 backdrop-blur-md p-2 rounded-lg text-gray-900 group-hover:bg-neon-purple group-hover:text-white transition-colors">
                                             <Wrench size={16} />
                                         </div>
                                     </div>
@@ -130,10 +130,10 @@ export default async function ServiceCategoryPage(props: { params: Promise<{ cat
                                     {/* Text Content */}
                                     <div className="px-4 pb-6 flex-grow flex flex-col justify-between">
                                         <div>
-                                            <h3 className="text-xl font-bold text-white mb-2 group-hover:text-neon-purple transition-colors">
+                                            <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-neon-purple transition-colors">
                                                 {service.name}
                                             </h3>
-                                            <p className="text-sm text-gray-400 leading-relaxed mb-4">
+                                            <p className="text-sm text-gray-600 leading-relaxed mb-4">
                                                 {service.desc}
                                             </p>
                                         </div>
@@ -148,13 +148,13 @@ export default async function ServiceCategoryPage(props: { params: Promise<{ cat
                 </div>
 
                 {/* Call to Action Banner */}
-                <div className="mb-24 relative bg-gradient-to-br from-neon-purple/20 to-blue-900/20 border border-white/10 rounded-2xl p-10 overflow-hidden text-center md:text-left">
+                <div className="mb-24 relative bg-gradient-to-br from-neon-purple/10 to-blue-500/10 border border-purple-100 rounded-2xl p-10 overflow-hidden text-center md:text-left">
                     <div className="absolute top-0 right-0 w-64 h-64 bg-neon-purple/20 blur-[80px] rounded-full pointer-events-none" />
 
                     <div className="relative z-10 flex flex-col md:flex-row items-center justify-between gap-8">
                         <div>
-                            <h2 className="text-2xl md:text-3xl font-bold text-white mb-4 font-orbitron">Need a Custom Solution?</h2>
-                            <p className="text-gray-300 max-w-xl">
+                            <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4 font-orbitron">Need a Custom Solution?</h2>
+                            <p className="text-gray-600 max-w-xl">
                                 Our engineering team specializes in solving unique challenges. Contact us for a free consultation and site audit.
                             </p>
                         </div>
@@ -166,7 +166,7 @@ export default async function ServiceCategoryPage(props: { params: Promise<{ cat
             </div>
 
             {/* FAQ Section */}
-            <div className="border-t border-white/5 bg-black/50">
+            <div className="border-t border-gray-100 bg-gray-50">
                 <FAQSection
                     title="Service FAQs"
                     subtitle={`Common questions about our ${categoryName} services`}

@@ -2,7 +2,7 @@ import CountUp from "@/components/ui/CountUp";
 
 export default function AboutPage() {
     return (
-        <div className="min-h-screen bg-black text-white pt-32 pb-16 px-6">
+        <div className="min-h-screen bg-white text-gray-900 pt-32 pb-16 px-6">
             <div className="container mx-auto">
                 {/* Page Header */}
                 <div className="mb-16 text-center">
@@ -15,40 +15,40 @@ export default function AboutPage() {
                 {/* Content Grid */}
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center mb-16">
                     <div>
-                        <h2 className="text-3xl font-bold text-white mb-6">Our Story</h2>
-                        <p className="text-gray-300 text-lg leading-relaxed mb-6">
-                            <span className="text-white font-semibold">Digi Max</span> is a premier distributor and system integrator for <span className="text-white font-semibold">Industrial Automation</span> and <span className="text-white font-semibold">Switchgear</span> products. With over two decades of experience, we specialize in delivering high-quality solutions for homes, buildings, data centers, and industries.
+                        <h2 className="text-3xl font-bold text-gray-900 mb-6">Our Story</h2>
+                        <p className="text-gray-600 text-lg leading-relaxed mb-6">
+                            <span className="text-gray-900 font-semibold">Digi Max</span> is a premier distributor and system integrator for <span className="text-gray-900 font-semibold">Industrial Automation</span> and <span className="text-gray-900 font-semibold">Switchgear</span> products. With over two decades of experience, we specialize in delivering high-quality solutions for homes, buildings, data centers, and industries.
                         </p>
-                        <p className="text-gray-300 text-lg leading-relaxed mb-6">
+                        <p className="text-gray-600 text-lg leading-relaxed mb-6">
                             We combine energy technologies, real-time automation, software, and services to help our clients manage their energy efficiently and safely. From PLCs and SCADA to Low Voltage distribution, we are your one-stop shop for all electrical and automation needs.
                         </p>
                     </div>
 
                     <div className="relative">
                         <div className="absolute inset-0 bg-neon-cyan/20 rounded-2xl transform rotate-3 blur-md" />
-                        <div className="relative bg-black/50 backdrop-blur-xl border border-white/10 p-8 rounded-2xl shadow-2xl">
+                        <div className="relative bg-white/80 backdrop-blur-xl border border-black/10 p-8 rounded-2xl shadow-xl">
                             <div className="grid grid-cols-2 gap-6">
-                                <div className="text-center p-6 border border-white/5 rounded-xl bg-white/5">
-                                    <h3 className="text-4xl font-bold text-white mb-2">
+                                <div className="text-center p-6 border border-black/5 rounded-xl bg-black/5">
+                                    <h3 className="text-4xl font-bold text-gray-900 mb-2">
                                         <CountUp end={20} suffix="+" />
                                     </h3>
-                                    <p className="text-gray-400 text-sm uppercase tracking-wider">Years Experience</p>
+                                    <p className="text-gray-500 text-sm uppercase tracking-wider">Years Experience</p>
                                 </div>
-                                <div className="text-center p-6 border border-white/5 rounded-xl bg-white/5">
+                                <div className="text-center p-6 border border-black/5 rounded-xl bg-black/5">
                                     <h3 className="text-4xl font-bold text-neon-cyan mb-2">
                                         <CountUp end={500} suffix="+" />
                                     </h3>
-                                    <p className="text-gray-400 text-sm uppercase tracking-wider">Projects Done</p>
+                                    <p className="text-gray-500 text-sm uppercase tracking-wider">Projects Done</p>
                                 </div>
-                                <div className="text-center p-6 border border-white/5 rounded-xl bg-white/5">
+                                <div className="text-center p-6 border border-black/5 rounded-xl bg-black/5">
                                     <h3 className="text-4xl font-bold text-neon-purple mb-2">24/7</h3>
-                                    <p className="text-gray-400 text-sm uppercase tracking-wider">Support</p>
+                                    <p className="text-gray-500 text-sm uppercase tracking-wider">Support</p>
                                 </div>
-                                <div className="text-center p-6 border border-white/5 rounded-xl bg-white/5">
-                                    <h3 className="text-4xl font-bold text-white mb-2">
+                                <div className="text-center p-6 border border-black/5 rounded-xl bg-black/5">
+                                    <h3 className="text-4xl font-bold text-gray-900 mb-2">
                                         <CountUp end={100} suffix="%" />
                                     </h3>
-                                    <p className="text-gray-400 text-sm uppercase tracking-wider">Satisfaction</p>
+                                    <p className="text-gray-500 text-sm uppercase tracking-wider">Satisfaction</p>
                                 </div>
                             </div>
                         </div>
@@ -57,15 +57,15 @@ export default function AboutPage() {
 
                 {/* Mission & Vision */}
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
-                    <div className="p-8 bg-white/5 border border-white/10 rounded-2xl backdrop-blur-sm">
+                    <div className="p-8 bg-white border border-gray-100 rounded-2xl shadow-lg">
                         <h3 className="text-2xl font-bold text-neon-cyan mb-4">Our Mission</h3>
-                        <p className="text-gray-300 leading-relaxed">
+                        <p className="text-gray-600 leading-relaxed">
                             To provide cutting-edge industrial automation and electrical solutions that empower businesses to operate efficiently, safely, and sustainably while maintaining the highest standards of quality and customer service.
                         </p>
                     </div>
-                    <div className="p-8 bg-white/5 border border-white/10 rounded-2xl backdrop-blur-sm">
+                    <div className="p-8 bg-white border border-gray-100 rounded-2xl shadow-lg">
                         <h3 className="text-2xl font-bold text-neon-purple mb-4">Our Vision</h3>
-                        <p className="text-gray-300 leading-relaxed">
+                        <p className="text-gray-600 leading-relaxed">
                             To be the leading provider of industrial automation solutions, recognized for innovation, reliability, and excellence in helping industries achieve their operational goals through advanced technology.
                         </p>
                     </div>
@@ -73,7 +73,7 @@ export default function AboutPage() {
 
                 {/* Why Choose Us */}
                 <div className="text-center mb-12">
-                    <h2 className="text-4xl font-bold text-white mb-12">Why Choose Us</h2>
+                    <h2 className="text-4xl font-bold text-gray-900 mb-12">Why Choose Us</h2>
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                         {[
                             { title: "Expert Team", desc: "Certified professionals with decades of combined experience" },
@@ -83,9 +83,9 @@ export default function AboutPage() {
                             { title: "Competitive Pricing", desc: "Best value without compromising on quality" },
                             { title: "Proven Track Record", desc: "500+ successful projects across industries" },
                         ].map((item, idx) => (
-                            <div key={idx} className="p-6 bg-black/40 border border-white/5 rounded-xl hover:border-neon-cyan/50 transition-all">
-                                <h4 className="text-xl font-bold text-white mb-2">{item.title}</h4>
-                                <p className="text-gray-400 text-sm">{item.desc}</p>
+                            <div key={idx} className="p-6 bg-white border border-gray-100 rounded-xl hover:border-neon-cyan/50 shadow-md hover:shadow-lg transition-all">
+                                <h4 className="text-xl font-bold text-gray-900 mb-2">{item.title}</h4>
+                                <p className="text-gray-600 text-sm">{item.desc}</p>
                             </div>
                         ))}
                     </div>

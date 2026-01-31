@@ -16,7 +16,7 @@ export default function ProductGallery({ images }: ProductGalleryProps) {
         <div className="flex flex-col gap-4 max-w-xl mx-auto">
             {/* Main Image Container - Compact 4:3 Aspect Ratio */}
             <div
-                className="relative aspect-[4/3] w-full rounded-2xl overflow-hidden border border-white/10 bg-white/5 backdrop-blur-sm group"
+                className="relative aspect-[4/3] w-full rounded-2xl overflow-hidden border border-gray-200 bg-white group shadow-sm"
                 onMouseEnter={() => setIsHovered(true)}
                 onMouseLeave={() => setIsHovered(false)}
             >
@@ -38,9 +38,8 @@ export default function ProductGallery({ images }: ProductGalleryProps) {
 
                 {/* Zoom Icon */}
                 <motion.div
-                    initial={{ opacity: 0, scale: 0.8 }}
                     animate={{ opacity: isHovered ? 1 : 0, scale: isHovered ? 1 : 0.8 }}
-                    className="absolute top-3 right-3 p-2 bg-black/60 backdrop-blur-md rounded-lg border border-white/10 text-white"
+                    className="absolute top-3 right-3 p-2 bg-white/90 backdrop-blur-md rounded-lg border border-gray-200 text-gray-900 shadow-md"
                 >
                     <Maximize2 size={16} />
                 </motion.div>
@@ -56,8 +55,8 @@ export default function ProductGallery({ images }: ProductGalleryProps) {
                         key={idx}
                         onClick={() => setSelectedImage(idx)}
                         className={`relative flex-shrink-0 w-20 aspect-square rounded-lg overflow-hidden border transition-all duration-300 snap-start ${selectedImage === idx
-                                ? "border-neon-cyan ring-1 ring-neon-cyan/20 opacity-100"
-                                : "border-white/10 hover:border-white/30 opacity-60 hover:opacity-100"
+                            ? "border-neon-cyan ring-1 ring-neon-cyan/20 opacity-100"
+                            : "border-gray-200 hover:border-neon-cyan/50 opacity-60 hover:opacity-100"
                             }`}
                     >
                         <img

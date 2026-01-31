@@ -28,9 +28,9 @@ const serviceDetailFAQs: FAQItem[] = [
 export default async function ServiceDetailPage(props: { params: Promise<{ category: string; slug: string }> }) {
     const params = await props.params;
     return (
-        <div className="min-h-screen bg-black text-white pt-32 px-6">
+        <div className="min-h-screen bg-white text-gray-900 pt-32 px-6">
             <div className="container mx-auto">
-                <div className="mb-4 flex items-center gap-2 text-sm text-gray-400 uppercase tracking-widest">
+                <div className="mb-4 flex items-center gap-2 text-sm text-gray-500 uppercase tracking-widest">
                     <Link href="/services" className="hover:text-neon-purple transition-colors cursor-pointer">
                         Services
                     </Link>
@@ -46,33 +46,33 @@ export default async function ServiceDetailPage(props: { params: Promise<{ categ
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-16">
                     <div>
-                        <h2 className="text-3xl font-bold text-white mb-6">Service Description</h2>
-                        <p className="text-gray-300 text-lg leading-relaxed mb-8">
-                            Our <span className="font-bold text-white uppercase">{params.slug.replace(/-/g, " ")}</span> service ensures that your systems run at peak efficiency.
+                        <h2 className="text-3xl font-bold text-gray-900 mb-6">Service Description</h2>
+                        <p className="text-gray-600 text-lg leading-relaxed mb-8">
+                            Our <span className="font-bold text-gray-900 uppercase">{params.slug.replace(/-/g, " ")}</span> service ensures that your systems run at peak efficiency.
                             We utilize the latest technology and industry best practices to deliver measurable results.
                         </p>
 
                         <ul className="space-y-4 mb-8">
-                            <li className="flex items-center gap-3 text-gray-300">
+                            <li className="flex items-center gap-3 text-gray-600">
                                 <div className="w-2 h-2 bg-neon-purple rounded-full" />
                                 Custom tailored strategies
                             </li>
-                            <li className="flex items-center gap-3 text-gray-300">
+                            <li className="flex items-center gap-3 text-gray-600">
                                 <div className="w-2 h-2 bg-neon-purple rounded-full" />
                                 Expert implementation team
                             </li>
-                            <li className="flex items-center gap-3 text-gray-300">
+                            <li className="flex items-center gap-3 text-gray-600">
                                 <div className="w-2 h-2 bg-neon-purple rounded-full" />
                                 24/7 Support & Monitoring
                             </li>
                         </ul>
 
-                        <button className="px-8 py-4 bg-neon-purple text-white font-bold rounded-full hover:bg-white hover:text-black transition-colors">
+                        <button className="px-8 py-4 bg-neon-purple text-white font-bold rounded-full hover:bg-neon-purple/80 hover:shadow-lg transition-all duration-300">
                             Schedule Consultation
                         </button>
                     </div>
 
-                    <div className="h-[400px] bg-white/5 rounded-2xl border border-white/10 flex items-center justify-center">
+                    <div className="h-[400px] bg-gray-100 rounded-2xl border border-gray-200 flex items-center justify-center">
                         <span className="text-gray-500">Service Diagram / Image</span>
                     </div>
                 </div>

@@ -46,7 +46,7 @@ export default async function ProductCategoryPage(props: { params: Promise<{ cat
     ];
 
     return (
-        <div className="min-h-screen bg-black text-white selection:bg-neon-cyan selection:text-black">
+        <div className="min-h-screen bg-white text-gray-900 selection:bg-neon-cyan selection:text-black">
             {/* Ambient Background */}
             <div className="fixed top-0 left-0 w-full h-full overflow-hidden pointer-events-none z-0">
                 <div className="absolute top-[-20%] right-[-10%] w-[600px] h-[600px] bg-neon-cyan/5 rounded-full blur-[150px]" />
@@ -57,8 +57,8 @@ export default async function ProductCategoryPage(props: { params: Promise<{ cat
                 {/* Breadcrumbs */}
                 <div className="mb-8 flex items-center gap-2 text-sm text-gray-500 font-medium">
                     <Link href="/products" className="hover:text-neon-cyan transition-colors">Products</Link>
-                    <span className="text-gray-700">/</span>
-                    <span className="text-gray-300 capitalize">{categoryName}</span>
+                    <span className="text-gray-400">/</span>
+                    <span className="text-gray-600 capitalize">{categoryName}</span>
                 </div>
 
                 {/* Hero Headers */}
@@ -66,10 +66,10 @@ export default async function ProductCategoryPage(props: { params: Promise<{ cat
                     <div className="inline-block px-3 py-1 rounded-full bg-neon-cyan/10 border border-neon-cyan/20 text-neon-cyan text-xs font-bold tracking-wider mb-4">
                         CATEGORY
                     </div>
-                    <h1 className="text-5xl md:text-6xl font-bold font-orbitron capitalize mb-6 text-white leading-tight">
+                    <h1 className="text-5xl md:text-6xl font-bold font-orbitron capitalize mb-6 text-gray-900 leading-tight">
                         {categoryData.title}
                     </h1>
-                    <p className="text-xl text-gray-400 max-w-3xl leading-relaxed border-l-2 border-neon-cyan pl-6">
+                    <p className="text-xl text-gray-600 max-w-3xl leading-relaxed border-l-2 border-neon-cyan pl-6">
                         {categoryData.description}
                     </p>
                 </div>
@@ -82,36 +82,36 @@ export default async function ProductCategoryPage(props: { params: Promise<{ cat
                             key={idx}
                             className="group block"
                         >
-                            <div className="relative h-full bg-white/5 border border-white/10 rounded-2xl overflow-hidden hover:border-neon-cyan/50 transition-all duration-300">
+                            <div className="relative h-full bg-white border border-gray-200 rounded-2xl overflow-hidden hover:border-neon-cyan/50 hover:shadow-lg transition-all duration-300">
                                 {/* Image Area */}
-                                <div className="aspect-[4/3] relative overflow-hidden bg-black/50">
-                                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent z-10" />
+                                <div className="aspect-[4/3] relative overflow-hidden bg-gray-100">
+                                    <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent z-10" />
                                     <img
                                         src={product.image}
                                         alt={product.name}
                                         className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700"
                                     />
                                     {/* Overlay Icon */}
-                                    <div className="absolute bottom-4 left-4 z-20 w-10 h-10 rounded-full bg-white/10 backdrop-blur-md flex items-center justify-center text-white border border-white/20 group-hover:bg-neon-cyan group-hover:text-black group-hover:border-neon-cyan transition-all duration-300">
+                                    <div className="absolute bottom-4 left-4 z-20 w-10 h-10 rounded-full bg-white/30 backdrop-blur-md flex items-center justify-center text-white border border-white/50 group-hover:bg-neon-cyan group-hover:text-black group-hover:border-neon-cyan transition-all duration-300">
                                         <ArrowRight size={18} />
                                     </div>
                                 </div>
 
                                 {/* Content */}
                                 <div className="p-6">
-                                    <h3 className="text-xl font-bold text-white mb-2 group-hover:text-neon-cyan transition-colors">
+                                    <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-neon-cyan transition-colors">
                                         {product.name}
                                     </h3>
-                                    <p className="text-sm text-gray-400 mb-4 line-clamp-2">
+                                    <p className="text-sm text-gray-600 mb-4 line-clamp-2">
                                         {product.desc}
                                     </p>
 
                                     {/* Features Badges */}
                                     <div className="flex flex-wrap gap-2">
-                                        <span className="text-[10px] uppercase font-bold px-2 py-1 rounded bg-white/5 text-gray-400 border border-white/5">
+                                        <span className="text-[10px] uppercase font-bold px-2 py-1 rounded bg-gray-100 text-gray-500 border border-gray-200">
                                             IEC Certified
                                         </span>
-                                        <span className="text-[10px] uppercase font-bold px-2 py-1 rounded bg-white/5 text-gray-400 border border-white/5">
+                                        <span className="text-[10px] uppercase font-bold px-2 py-1 rounded bg-gray-100 text-gray-500 border border-gray-200">
                                             Heavy Duty
                                         </span>
                                     </div>
@@ -121,47 +121,47 @@ export default async function ProductCategoryPage(props: { params: Promise<{ cat
                     ))}
 
                     {/* Placeholder Card for "Layout Balance" or "Coming Soon" */}
-                    <div className="bg-white/5 border border-white/10 border-dashed rounded-2xl p-8 flex flex-col items-center justify-center text-center opacity-50 hover:opacity-100 transition-opacity duration-300">
-                        <Box size={40} className="text-gray-600 mb-4" />
-                        <h3 className="text-lg font-bold text-gray-400 mb-2">More Coming Soon</h3>
-                        <p className="text-sm text-gray-600">We are constantly adding new products to our catalog.</p>
+                    <div className="bg-white border border-gray-200 border-dashed rounded-2xl p-8 flex flex-col items-center justify-center text-center opacity-50 hover:opacity-100 transition-opacity duration-300">
+                        <Box size={40} className="text-gray-400 mb-4" />
+                        <h3 className="text-lg font-bold text-gray-500 mb-2">More Coming Soon</h3>
+                        <p className="text-sm text-gray-500">We are constantly adding new products to our catalog.</p>
                     </div>
                 </div>
 
                 {/* Info Section */}
                 <div className="mt-20 grid grid-cols-1 md:grid-cols-3 gap-6 mb-24">
-                    <div className="bg-white/5 rounded-2xl p-6 border border-white/10 flex items-start gap-4">
+                    <div className="bg-white rounded-2xl p-6 border border-gray-100 shadow-sm flex items-start gap-4">
                         <div className="p-3 rounded-lg bg-neon-cyan/10 text-neon-cyan">
                             <Zap size={24} />
                         </div>
                         <div>
-                            <h4 className="font-bold text-white mb-1">Energy Efficient</h4>
-                            <p className="text-xs text-gray-400">Optimized for minimal power consumption without performance loss.</p>
+                            <h4 className="font-bold text-gray-900 mb-1">Energy Efficient</h4>
+                            <p className="text-xs text-gray-600">Optimized for minimal power consumption without performance loss.</p>
                         </div>
                     </div>
-                    <div className="bg-white/5 rounded-2xl p-6 border border-white/10 flex items-start gap-4">
+                    <div className="bg-white rounded-2xl p-6 border border-gray-100 shadow-sm flex items-start gap-4">
                         <div className="p-3 rounded-lg bg-blue-500/10 text-blue-400">
                             <Activity size={24} />
                         </div>
                         <div>
-                            <h4 className="font-bold text-white mb-1">Real-time Monitoring</h4>
-                            <p className="text-xs text-gray-400">Advanced telemetry allows for continuous system health checks.</p>
+                            <h4 className="font-bold text-gray-900 mb-1">Real-time Monitoring</h4>
+                            <p className="text-xs text-gray-600">Advanced telemetry allows for continuous system health checks.</p>
                         </div>
                     </div>
-                    <div className="bg-white/5 rounded-2xl p-6 border border-white/10 flex items-start gap-4">
+                    <div className="bg-white rounded-2xl p-6 border border-gray-100 shadow-sm flex items-start gap-4">
                         <div className="p-3 rounded-lg bg-purple-500/10 text-purple-400">
                             <Info size={24} />
                         </div>
                         <div>
-                            <h4 className="font-bold text-white mb-1">Global Standards</h4>
-                            <p className="text-xs text-gray-400">Compliant with international safety and quality protocols.</p>
+                            <h4 className="font-bold text-gray-900 mb-1">Global Standards</h4>
+                            <p className="text-xs text-gray-600">Compliant with international safety and quality protocols.</p>
                         </div>
                     </div>
                 </div>
             </div>
 
             {/* FAQ Section */}
-            <div className="border-t border-white/5 bg-black/50">
+            <div className="border-t border-gray-100 bg-gray-50">
                 <FAQSection
                     title="Category FAQs"
                     subtitle={`Common questions about our ${categoryName} solutions`}

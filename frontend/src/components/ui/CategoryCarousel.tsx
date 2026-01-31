@@ -113,13 +113,13 @@ export default function CategoryCarousel({ categoryName, items, accentColor = "c
                 <div className="flex gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                     <button
                         onClick={prev}
-                        className={`p-3 rounded-full border ${colors.border} ${colors.text} hover:bg-white/10 transition-all duration-300`}
+                        className={`p-3 rounded-full border ${colors.border} ${colors.text} hover:bg-gray-100 transition-all duration-300`}
                     >
                         <ChevronLeft size={20} />
                     </button>
                     <button
                         onClick={next}
-                        className={`p-3 rounded-full border ${colors.border} ${colors.text} hover:bg-white/10 transition-all duration-300`}
+                        className={`p-3 rounded-full border ${colors.border} ${colors.text} hover:bg-gray-100 transition-all duration-300`}
                     >
                         <ChevronRight size={20} />
                     </button>
@@ -164,9 +164,9 @@ export default function CategoryCarousel({ categoryName, items, accentColor = "c
                                 draggable={false}
                                 onClick={handleLinkClick}
                             >
-                                <div className={`group/card relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl overflow-hidden hover:border-${accentColor === "cyan" ? "neon-cyan" : "neon-purple"}/50 transition-all duration-300 h-full flex flex-col`}>
+                                <div className={`group/card relative bg-white border border-gray-200 rounded-2xl overflow-hidden hover:border-${accentColor === "cyan" ? "neon-cyan" : "neon-purple"}/50 hover:shadow-lg transition-all duration-300 h-full flex flex-col`}>
                                     {/* Image */}
-                                    <div className="h-48 md:h-60 overflow-hidden relative bg-black/40 flex-shrink-0">
+                                    <div className="h-48 md:h-60 overflow-hidden relative bg-gray-100 flex-shrink-0">
                                         {item.image ? (
                                             <img
                                                 src={item.image}
@@ -178,16 +178,16 @@ export default function CategoryCarousel({ categoryName, items, accentColor = "c
                                                 <span className="text-sm">No Image</span>
                                             </div>
                                         )}
-                                        <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+                                        <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
                                     </div>
 
                                     {/* Content */}
                                     <div className="p-6 flex-grow flex flex-col justify-between">
                                         <div>
-                                            <h3 className={`text-xl font-bold text-white mb-2 group-hover/card:${colors.text} transition-colors line-clamp-1`}>
+                                            <h3 className={`text-xl font-bold text-gray-900 mb-2 group-hover/card:${colors.text} transition-colors line-clamp-1`}>
                                                 {item.title}
                                             </h3>
-                                            <p className="text-gray-400 text-sm line-clamp-2 leading-relaxed">
+                                            <p className="text-gray-600 text-sm line-clamp-2 leading-relaxed">
                                                 {item.description}
                                             </p>
                                         </div>
@@ -212,7 +212,7 @@ export default function CategoryCarousel({ categoryName, items, accentColor = "c
                     <button
                         key={idx}
                         onClick={() => scrollToItem(idx)}
-                        className={`h-1.5 rounded-full transition-all duration-300 ${idx === currentIndex ? `${colors.bg} w-8` : "bg-white/10 w-2 hover:bg-white/30"
+                        className={`h-1.5 rounded-full transition-all duration-300 ${idx === currentIndex ? `${colors.bg} w-8` : "bg-gray-200 w-2 hover:bg-gray-300"
                             }`}
                     />
                 ))}

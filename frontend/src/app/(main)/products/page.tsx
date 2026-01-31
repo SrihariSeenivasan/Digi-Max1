@@ -127,15 +127,15 @@ const productFAQs: FAQItem[] = [
 
 export default async function ProductsPage() {
     return (
-        <div className="min-h-screen bg-black text-white pt-32 pb-16 px-6">
+        <div className="min-h-screen bg-white text-gray-900 pt-32 pb-16 px-6">
             <div className="container mx-auto">
                 {/* Page Header */}
                 <div className="mb-16 text-center">
                     <span className="text-neon-cyan text-sm uppercase tracking-widest">Our Catalog</span>
-                    <h1 className="text-5xl md:text-6xl font-bold font-orbitron mt-2 mb-6 text-white">
+                    <h1 className="text-5xl md:text-6xl font-bold font-orbitron mt-2 mb-6 text-gray-900">
                         All <span className="text-transparent bg-clip-text bg-gradient-to-r from-neon-cyan to-neon-purple">Products</span>
                     </h1>
-                    <p className="text-gray-400 text-lg max-w-3xl mx-auto">
+                    <p className="text-gray-600 text-lg max-w-3xl mx-auto">
                         Explore our comprehensive range of industrial automation and electrical products.
                         From low voltage distribution to advanced monitoring systems, we have everything you need.
                     </p>

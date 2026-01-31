@@ -322,7 +322,7 @@ export default function FloatingRobotAssistant() {
 
                 {/* Tooltip */}
                 <div className="absolute -bottom-14 right-0 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
-                    <div className="bg-black/90 text-white text-xs px-3 py-2 rounded-lg whitespace-nowrap border border-neon-cyan/30 shadow-lg">
+                    <div className="bg-white text-gray-900 text-xs px-3 py-2 rounded-lg whitespace-nowrap border border-gray-200 shadow-lg">
                         Click me for help! 🤖
                     </div>
                 </div>
@@ -360,27 +360,27 @@ export default function FloatingRobotAssistant() {
                             </div>
 
                             {/* Speech Bubble */}
-                            <div className="absolute -left-48 top-4 bg-black/90 text-white text-sm px-4 py-2 rounded-lg border border-neon-cyan/30 whitespace-nowrap shadow-lg">
+                            <div className="absolute -left-48 top-4 bg-white text-gray-900 text-sm px-4 py-2 rounded-lg border border-gray-200 whitespace-nowrap shadow-lg">
                                 Type your query! 💬
                             </div>
                         </div>
 
                         {/* Chat Window */}
-                        <div className="w-96 h-[500px] bg-black/95 backdrop-blur-xl border border-neon-cyan/30 rounded-2xl shadow-2xl flex flex-col overflow-hidden">
+                        <div className="w-96 h-[500px] bg-white stroke-gray-200 border border-gray-200 rounded-2xl shadow-2xl flex flex-col overflow-hidden">
                             {/* Header */}
-                            <div className="bg-gradient-to-r from-neon-cyan/20 to-neon-purple/20 p-4 border-b border-white/10 flex items-center justify-between">
+                            <div className="bg-gray-50 p-4 border-b border-gray-200 flex items-center justify-between">
                                 <div className="flex items-center gap-3">
                                     <div className="w-10 h-10 bg-gradient-to-br from-neon-cyan to-neon-purple rounded-full flex items-center justify-center text-xl">
                                         🤖
                                     </div>
                                     <div>
-                                        <h3 className="text-white font-bold">DIGI MAX Assistant</h3>
-                                        <p className="text-xs text-gray-400">Online • Ready to help</p>
+                                        <h3 className="text-gray-900 font-bold">DIGI MAX Assistant</h3>
+                                        <p className="text-xs text-gray-500">Online • Ready to help</p>
                                     </div>
                                 </div>
                                 <button
                                     onClick={() => setIsChatOpen(false)}
-                                    className="text-gray-400 hover:text-white transition-colors"
+                                    className="text-gray-500 hover:text-gray-900 transition-colors"
                                 >
                                     <X size={20} />
                                 </button>
@@ -393,8 +393,8 @@ export default function FloatingRobotAssistant() {
                                     <div className="w-8 h-8 bg-gradient-to-br from-neon-cyan to-neon-purple rounded-full flex items-center justify-center text-sm flex-shrink-0">
                                         🤖
                                     </div>
-                                    <div className="bg-white/10 rounded-2xl rounded-tl-none px-4 py-2 max-w-[80%]">
-                                        <p className="text-white text-sm">
+                                    <div className="bg-gray-100 rounded-2xl rounded-tl-none px-4 py-2 max-w-[80%]">
+                                        <p className="text-gray-800 text-sm">
                                             Hi! I'm your DIGI MAX assistant. How can I help you today?
                                         </p>
                                     </div>
@@ -414,7 +414,7 @@ export default function FloatingRobotAssistant() {
                                         <div
                                             className={`rounded-2xl px-4 py-2 max-w-[80%] ${msg.sender === "user"
                                                 ? "bg-neon-cyan text-black rounded-tr-none"
-                                                : "bg-white/10 text-white rounded-tl-none"
+                                                : "bg-gray-100 text-gray-800 rounded-tl-none"
                                                 }`}
                                         >
                                             <p className="text-sm">{msg.text}</p>
@@ -424,7 +424,7 @@ export default function FloatingRobotAssistant() {
                             </div>
 
                             {/* Input */}
-                            <div className="p-4 border-t border-white/10">
+                            <div className="p-4 border-t border-gray-200">
                                 <div className="flex gap-2">
                                     <input
                                         type="text"
@@ -432,7 +432,7 @@ export default function FloatingRobotAssistant() {
                                         onChange={(e) => setMessage(e.target.value)}
                                         onKeyPress={(e) => e.key === "Enter" && handleSendMessage()}
                                         placeholder="Type your message..."
-                                        className="flex-1 bg-white/10 border border-white/20 rounded-full px-4 py-2 text-white placeholder-gray-400 focus:outline-none focus:border-neon-cyan transition-colors"
+                                        className="flex-1 bg-gray-100 border border-gray-200 rounded-full px-4 py-2 text-gray-900 placeholder-gray-500 focus:outline-none focus:border-neon-cyan transition-colors"
                                     />
                                     <button
                                         onClick={handleSendMessage}

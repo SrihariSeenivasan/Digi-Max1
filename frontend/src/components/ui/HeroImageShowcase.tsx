@@ -82,7 +82,7 @@ export default function HeroImageShowcase() {
 
                 {/* Rotating Ring Background */}
                 <motion.div
-                    className="absolute w-[600px] h-[600px] border border-white/5 rounded-full"
+                    className="absolute w-[600px] h-[600px] border border-black/5 rounded-full"
                     animate={{ rotate: 360 }}
                     transition={{ duration: 30, repeat: Infinity, ease: "linear" }}
                 >
@@ -123,7 +123,7 @@ export default function HeroImageShowcase() {
                                         perspective: "1000px"
                                     }}
                                 >
-                                    <div className="relative w-full h-full rounded-3xl overflow-hidden bg-deep-blue border border-white/20 shadow-2xl group">
+                                    <div className="relative w-full h-full rounded-3xl overflow-hidden bg-white border border-black/10 shadow-2xl group">
                                         {/* Image with Parallax Effect */}
                                         <motion.div
                                             className="absolute inset-0"
@@ -138,7 +138,7 @@ export default function HeroImageShowcase() {
                                         </motion.div>
 
                                         {/* Gradient Overlay - Solid Deep Blue at bottom */}
-                                        <div className="absolute inset-0 bg-gradient-to-t from-deep-blue via-deep-blue/80 to-transparent" />
+                                        <div className="absolute inset-0 bg-gradient-to-t from-white via-white/80 to-transparent" />
 
                                         {/* Removed Colored Pulse Overlay to match background */}
 
@@ -149,10 +149,10 @@ export default function HeroImageShowcase() {
                                                 initial={{ y: 20, opacity: 0 }}
                                                 animate={isActive ? { y: 0, opacity: 1 } : { y: 20, opacity: 0 }}
                                                 transition={{ delay: 0.2 }}
-                                                className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md border border-white/20 rounded-full px-4 py-1.5 mb-4"
+                                                className="inline-flex items-center gap-2 bg-black/5 backdrop-blur-md border border-black/10 rounded-full px-4 py-1.5 mb-4"
                                             >
                                                 <span className={`h-2 w-2 rounded-full bg-${card.color} animate-pulse`} />
-                                                <span className="text-xs text-white uppercase tracking-wider font-semibold">
+                                                <span className="text-xs text-gray-700 uppercase tracking-wider font-semibold">
                                                     {card.badge}
                                                 </span>
                                             </motion.div>
@@ -162,7 +162,7 @@ export default function HeroImageShowcase() {
                                                 initial={{ y: 20, opacity: 0 }}
                                                 animate={isActive ? { y: 0, opacity: 1 } : { y: 20, opacity: 0 }}
                                                 transition={{ delay: 0.3 }}
-                                                className="text-3xl font-bold text-white mb-2 font-orbitron"
+                                                className="text-3xl font-bold text-gray-900 mb-2 font-orbitron"
                                             >
                                                 {card.title}
                                             </motion.h3>
@@ -172,19 +172,19 @@ export default function HeroImageShowcase() {
                                                 initial={{ y: 20, opacity: 0 }}
                                                 animate={isActive ? { y: 0, opacity: 1 } : { y: 20, opacity: 0 }}
                                                 transition={{ delay: 0.4 }}
-                                                className={`text-${card.color} text-sm tracking-wide`}
+                                                className={`text-gray-500 text-sm tracking-wide`}
                                             >
                                                 {card.subtitle}
                                             </motion.p>
 
                                             {/* Progress Bar */}
                                             <motion.div
-                                                className="mt-6 h-1 bg-white/10 rounded-full overflow-hidden"
+                                                className="mt-6 h-1 bg-black/10 rounded-full overflow-hidden"
                                                 initial={{ opacity: 0 }}
                                                 animate={isActive ? { opacity: 1 } : { opacity: 0 }}
                                             >
                                                 <motion.div
-                                                    className={`h-full bg-gradient-to-r from-${card.color} to-white`}
+                                                    className={`h-full bg-gradient-to-r from-${card.color} to-transparent`}
                                                     initial={{ width: "0%" }}
                                                     animate={isActive ? { width: "100%" } : { width: "0%" }}
                                                     transition={{ duration: 3.5, ease: "linear" }}
@@ -217,7 +217,7 @@ export default function HeroImageShowcase() {
                             whileHover={{ scale: 1.2 }}
                             whileTap={{ scale: 0.9 }}
                         >
-                            <div className={`w-2 h-2 rounded-full transition-all duration-300 ${currentIndex === index ? 'bg-white w-8' : 'bg-white/30'
+                            <div className={`w-2 h-2 rounded-full transition-all duration-300 ${currentIndex === index ? 'bg-black w-8' : 'bg-black/20'
                                 }`} />
                         </motion.button>
                     ))}
@@ -225,30 +225,30 @@ export default function HeroImageShowcase() {
 
                 {/* Floating Stats Cards */}
                 <motion.div
-                    className="absolute top-12 left-8 bg-deep-blue/60 backdrop-blur-xl border border-white/10 rounded-2xl p-4 z-40 w-32"
+                    className="absolute top-12 left-8 bg-white/80 backdrop-blur-xl border border-black/10 rounded-2xl p-4 z-40 w-32"
                     initial={{ x: -100, opacity: 0 }}
                     animate={{ x: 0, opacity: 1 }}
                     transition={{ delay: 0.5, type: "spring" }}
                 >
                     <div className="flex items-center gap-2 mb-2">
                         <div className="w-3 h-3 rounded-full bg-neon-green animate-pulse" />
-                        <span className="text-[10px] text-white/60 uppercase">Status</span>
+                        <span className="text-[10px] text-gray-500 uppercase">Status</span>
                     </div>
-                    <p className="text-xl font-bold text-white">99.9%</p>
+                    <p className="text-xl font-bold text-gray-900">99.9%</p>
                     <p className="text-xs text-neon-green">Uptime</p>
                 </motion.div>
 
                 <motion.div
-                    className="absolute top-12 right-8 bg-deep-blue/60 backdrop-blur-xl border border-white/10 rounded-2xl p-4 z-40 w-32"
+                    className="absolute top-12 right-8 bg-white/80 backdrop-blur-xl border border-black/10 rounded-2xl p-4 z-40 w-32"
                     initial={{ x: 100, opacity: 0 }}
                     animate={{ x: 0, opacity: 1 }}
                     transition={{ delay: 0.7, type: "spring" }}
                 >
                     <div className="flex items-center gap-2 mb-2">
                         <div className="w-3 h-3 rounded-full bg-neon-cyan animate-pulse" />
-                        <span className="text-[10px] text-white/60 uppercase">Devices</span>
+                        <span className="text-[10px] text-gray-500 uppercase">Devices</span>
                     </div>
-                    <p className="text-xl font-bold text-white">2.4K</p>
+                    <p className="text-xl font-bold text-gray-900">2.4K</p>
                     <p className="text-xs text-neon-cyan">Connected</p>
                 </motion.div>
             </div>
